@@ -106,7 +106,7 @@ int main()
 
 
 	WindowHandler *wh = new WindowHandler(300, 300);
-	SDL_Surface *background = load_media("background.bmp", wh->getSurfaceFormat());
+	SDL_Surface *background = load_media("opt_load/background.bmp", wh->getSurfaceFormat());
 	wh->blit_stretched(background);
 	
 	bool quit_app = false;

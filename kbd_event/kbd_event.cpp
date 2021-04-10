@@ -76,10 +76,10 @@ int main()
 	character c;
 	SDL_Surface *surfaces[4];
 	
-	surfaces[0] = load_media("red.bmp");
-	surfaces[1] = load_media("blue.bmp");
-	surfaces[2] = load_media("green.bmp");
-	surfaces[3] = load_media("pink.bmp");	
+	surfaces[0] = load_media("kbd_event/red.bmp");
+	surfaces[1] = load_media("kbd_event/blue.bmp");
+	surfaces[2] = load_media("kbd_event/green.bmp");
+	surfaces[3] = load_media("kbd_event/pink.bmp");	
 	
 	WindowHandler *wh = new WindowHandler(300, 300);
 	wh->blit_new_surface(surfaces[0]);

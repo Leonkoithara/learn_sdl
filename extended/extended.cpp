@@ -142,7 +142,7 @@ int main()
 		return -1;
 
 	WindowHandler *wh = new WindowHandler(300, 300);
-	SDL_Surface *background = load_imgmedia("background.png", wh->getSurfaceFormat());
+	SDL_Surface *background = load_imgmedia("extended/background.png", wh->getSurfaceFormat());
 	wh->blit_stretched(background);
 	
 	bool quit_app = false;

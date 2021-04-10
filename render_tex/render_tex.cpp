@@ -1,6 +1,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 
+#include <SDL2/SDL_render.h>
 #include <stdio.h>
 
 bool init();
@@ -46,13 +47,15 @@ public:
 		return SDL_GetWindowSurface(window);
 	}
 
-	void RenderTexture(const char *filepath)
+	SDL_Texture* RenderTexture(const char *filepath)
 	{
 		SDL_Texture *texture = load_texture(filepath, renderer);
 
 		SDL_RenderCopy(renderer, texture, NULL, NULL);
 
 		SDL_RenderPresent(renderer);
+
+		return texture;
 	}
 
 	~WindowHandler()
@@ -60,6 +63,7 @@ public:
 		printf("Deleting window...\n");
 
 		SDL_DestroyWindow(window);
+		SDL_DestroyRenderer(renderer);
 	}
 };
 
@@ -69,7 +73,7 @@ int main()
 		return -1;
 
 	WindowHandler *wh = new WindowHandler(300, 300);
-	wh->RenderTexture("background.png");
+	SDL_Texture *tex = wh->RenderTexture("render_tex/background.png");
 	
 	bool quit_app = false;
 	SDL_Event e;
@@ -86,7 +90,9 @@ int main()
 	}
 	
 	delete wh;
+	SDL_DestroyTexture(tex);
 
+	IMG_Quit();
 	SDL_Quit();
 	
 	return 0;

@@ -50,7 +50,7 @@ int main()
 
 	WindowHandler *wh = new WindowHandler(700, 700);
 
-	SDL_Surface *background = SDL_LoadBMP("background.bmp");
+	SDL_Surface *background = SDL_LoadBMP("events/background.bmp");
 	wh->blit_new_surface(background);
 
 		
