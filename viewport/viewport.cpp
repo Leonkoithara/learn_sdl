@@ -136,10 +136,10 @@ int main()
 	WindowHandler *wh = new WindowHandler(200, 200);
 
 	SDL_Texture *textures[4];
-	textures[0] = wh->RenderTexture("viewport/red.png", &rect1);
-	textures[1] = wh->RenderTexture("viewport/green.png", &rect2);
-	textures[2] = wh->RenderTexture("viewport/blue.png", &rect3);
-	textures[3] = wh->RenderTexture("viewport/pink.png", &rect4);
+	textures[0] = wh->RenderTexture("images/red.png", &rect1);
+	textures[1] = wh->RenderTexture("images/green.png", &rect2);
+	textures[2] = wh->RenderTexture("images/blue.png", &rect3);
+	textures[3] = wh->RenderTexture("images/pink.png", &rect4);
 
 	wh->UpdateRenderedBuffer();
 		

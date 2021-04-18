@@ -62,7 +62,7 @@ bool init_screen(int screen_width, int screen_height)
 
 bool load_media()
 {
-	HELLO_IMAGE = SDL_LoadBMP("image/blue.bmp");
+	HELLO_IMAGE = SDL_LoadBMP("images/blue.bmp");
 
 	if(HELLO_IMAGE == NULL)
 	{

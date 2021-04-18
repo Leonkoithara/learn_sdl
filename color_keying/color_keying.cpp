@@ -215,8 +215,8 @@ int main()
 	WindowHandler *wh = new WindowHandler(600, 800);
 	Texture *textures[2];
 
-	textures[1] = wh->RenderTexture("color_keying/background.png", NULL, 0, 0);
-	textures[0] = wh->RenderTexture("color_keying/blue.png", NULL, 200, 200);
+	textures[1] = wh->RenderTexture("images/background.png", NULL, 0, 0);
+	textures[0] = wh->RenderTexture("images/blue.png", NULL, 200, 200);
 
 	wh->UpdateRenderedBuffer();
 		

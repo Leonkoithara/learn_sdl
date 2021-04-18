@@ -73,7 +73,7 @@ int main()
 		return -1;
 
 	WindowHandler *wh = new WindowHandler(300, 300);
-	SDL_Texture *tex = wh->RenderTexture("render_tex/background.png");
+	SDL_Texture *tex = wh->RenderTexture("images/background.png");
 	
 	bool quit_app = false;
 	SDL_Event e;
